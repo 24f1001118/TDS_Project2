@@ -26,7 +26,7 @@ load_dotenv()
 AIPIPE_API_KEY = os.getenv("AIPIPE_TOKEN")
 AIPIPE_URL = "https://aipipe.org/openrouter/v1/chat/completions"
 MODEL = "openai/gpt-4o-mini"
-EXEC_TIMEOUT = 150  # 3 minutes per subtask
+EXEC_TIMEOUT = 180  # 3 minutes per subtask
 MAX_INLINE_FILE_BYTES = 200 * 1024  # 200KB
 # ----------------------------------------
 
