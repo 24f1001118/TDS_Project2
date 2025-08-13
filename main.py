@@ -584,5 +584,8 @@ Return the exact JSON object format requested.
     logger.info(f"Analysis complete. Results: {type(results)} with {len(results) if hasattr(results, '__len__') else 'N/A'} items")
     return JSONResponse(content=results)
 
+import os
+from main import app
+
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000, log_level="info")
+    uvicorn.run(app, host="0.0.0.0", port=int(os.environ.get("PORT", 8000)), log_level="info")
